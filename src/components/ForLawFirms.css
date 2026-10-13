@@ -1,0 +1,110 @@
+.firms {
+  background: var(--color-bg);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.firms__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-20);
+  align-items: start;
+}
+
+/* Left */
+.firms__left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  position: sticky;
+  top: 96px;
+}
+
+.firms__title {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.firms__body {
+  font-size: var(--text-md);
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  max-width: 440px;
+}
+
+.firms__disclaimer {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  border-left: 2px solid var(--color-border);
+  padding-left: var(--space-4);
+  line-height: 1.65;
+  max-width: 400px;
+}
+
+/* Right */
+.firms__right {
+  display: flex;
+  flex-direction: column;
+}
+
+.firms__points {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.firms__point {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-6) 0;
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.firms__point:first-child {
+  padding-top: 0;
+}
+
+.firms__point-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-base);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+.firms__point-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: var(--color-brand-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-brand);
+  flex-shrink: 0;
+}
+
+.firms__point-body {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  padding-left: calc(32px + var(--space-3));
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .firms__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+  .firms__left { position: static; }
+}
+
+@media (max-width: 640px) {
+  .firms__title { font-size: var(--text-2xl); }
+}

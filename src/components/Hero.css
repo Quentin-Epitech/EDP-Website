@@ -1,0 +1,105 @@
+.hero {
+  padding-top: calc(64px + var(--space-20));
+  padding-bottom: var(--space-24);
+  background: var(--color-bg);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+/* Content */
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 520px;
+}
+
+.hero__title {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+}
+
+.hero__title-serif {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-brand);
+}
+
+.hero__subtitle {
+  font-size: var(--text-md);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  max-width: 460px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+}
+
+.hero__availability {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+}
+
+.hero__avail-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #C4A35A;
+  flex-shrink: 0;
+}
+
+/* Visual */
+.hero__visual {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero__title { font-size: var(--text-3xl); }
+  .hero__inner { gap: var(--space-10); }
+}
+
+@media (max-width: 860px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .hero__content {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .hero__subtitle { max-width: 100%; }
+  .hero__visual {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title { font-size: var(--text-2xl); }
+  .hero__actions { flex-direction: column; width: 100%; }
+  .hero__actions .btn { width: 100%; justify-content: center; }
+  .hero { padding-top: calc(64px + var(--space-10)); }
+}

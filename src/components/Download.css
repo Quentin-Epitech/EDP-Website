@@ -1,0 +1,115 @@
+.download {
+  background: var(--color-bg-alt);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.download__header {
+  max-width: 580px;
+  margin-bottom: var(--space-16);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.download__title {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.download__intro {
+  font-size: var(--text-md);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* Blocks */
+.download__blocks {
+  display: flex;
+  gap: 0;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  overflow: hidden;
+  margin-bottom: var(--space-8);
+  max-width: 720px;
+}
+
+.download__block {
+  flex: 1;
+  padding: var(--space-10);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.download__sep {
+  width: var(--border-width);
+  background: var(--color-border);
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.download__block-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.download__block-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--color-brand-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-brand);
+  flex-shrink: 0;
+}
+
+.download__block-title {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.download__block-meta {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+}
+
+.download__btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.download__unavailable {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.download__note {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  border-top: var(--border-width) solid var(--color-border);
+  padding-top: var(--space-6);
+  max-width: 640px;
+  line-height: 1.65;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .download__blocks {
+    flex-direction: column;
+  }
+  .download__sep {
+    width: auto;
+    height: var(--border-width);
+  }
+  .download__block { padding: var(--space-8); }
+  .download__title { font-size: var(--text-2xl); }
+}
